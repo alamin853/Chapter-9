@@ -1,0 +1,29 @@
+var arr = [2, 3, 4, 5, 6]
+
+// var sum = 0
+// arr.forEach(function(value, index, arr){
+//     // console.log(value, index, arr)
+//     sum += value
+// })
+// console.log(sum)
+
+function forEach(arr, cb) {
+    for(var i = 0; i < arr.length; i++){
+        var element = arr[i]
+        cb(element)
+    }
+}
+
+var sum2 = 0
+
+forEach(arr, function(value){
+    sum2 += value
+})
+console.log(sum2)
+
+
+arr.forEach(function(value, index, arr){
+    arr[index] = value + 5
+})
+
+console.log(arr)
